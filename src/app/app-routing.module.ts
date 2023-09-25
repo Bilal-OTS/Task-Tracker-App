@@ -7,4 +7,9 @@ const routes: Routes = [];
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  url: any;
+  navigate(arg0: any[]) {
+    throw new Error('Method not implemented.');
+  }
+}

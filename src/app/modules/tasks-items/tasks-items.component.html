@@ -1,0 +1,20 @@
+<section class="main-section">
+    <div class="container">
+        <div class="row" *ngFor="let task of tasks"
+      
+        >
+            <div [ngClass]="{ reminder: task.reminder }"  class="task d-flex justify-content-between"
+            (dblclick)="onToggle(task)"
+            >
+                <div class="">
+                    <h3 class="task-title">{{ task.text }}</h3>
+                    <p class="task-day">{{ task.day }}</p>
+                </div>
+                <div (click)="onDelete(task)" class="task-bin">
+                    <fa-icon  [ngStyle]="{'color':'red'}" [icon]="faTimes"></fa-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
