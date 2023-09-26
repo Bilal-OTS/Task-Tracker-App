@@ -9,6 +9,8 @@ import { HeaderComponent } from './modules/layout/header/header.component';
 import { TasksItemsComponent } from './modules/tasks-items/tasks-items.component';
 import { AddButtonComponent } from './Shared/components/add-button/add-button.component';
 import { TasksComponent } from './modules/tasks/tasks.component';
+import { AddTaskItemComponent } from './modules/add-task-item/add-task-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { TasksComponent } from './modules/tasks/tasks.component';
     TasksItemsComponent,
     AddButtonComponent,
     TasksComponent,
+    AddTaskItemComponent,
   ],
   imports: [
   BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

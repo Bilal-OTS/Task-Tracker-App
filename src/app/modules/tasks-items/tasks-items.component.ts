@@ -32,8 +32,18 @@ export class TasksItemsComponent implements OnInit {
     this.tasksService.updateTaskReminder(task).subscribe();
   }
 
-  onDelete(task: any) {
-    this.onDeleteTask.emit(task);
-  }
+  // onDelete(task: any) {
+  //   this.onDeleteTask.emit(task);
+  // }
 
+  onDelete(task: Task): void {
+    this.tasksService
+      .deleteTask(task)
+      .subscribe(
+        () => (this.tasks = this.tasks.filter((t) => t.id! === task.id))
+      );
+    setTimeout(() => {
+      this.getTasks();
+    });
+  }
 }
