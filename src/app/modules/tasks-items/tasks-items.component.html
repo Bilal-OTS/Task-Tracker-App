@@ -1,3 +1,10 @@
+<section class="mb-3">
+    <div class="container p-0">
+        <div class="row">
+            <app-add-task-item (onAddTask)="addTask($event)"></app-add-task-item>
+        </div>
+    </div>
+</section>
 <section class="main-section">
     <div class="container">
         <div class="row" *ngFor="let task of tasks"

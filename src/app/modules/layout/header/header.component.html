@@ -4,11 +4,11 @@
       <div class="navbar mb-5">
         <img
           src="../../../../assets/images/logo-task-traker.jpg"
-          alt="Task Tracker"
+          alt="Task Tracker" routerLink="/"
           class="task-tracker-logo"
         />
-        <app-add-button
-          color="red" text="Add" (btnClick)="toggleAddTask()">
+        <app-add-button *ngIf="hasRoute('/')"
+          color="{{ showAddTasks ? 'red' : 'black'}}" text="{{ showAddTasks ? 'Close' : 'Add New Task'}}" (btnClick)="toggleAddTask()">
         </app-add-button>
       </div>
     </div>
