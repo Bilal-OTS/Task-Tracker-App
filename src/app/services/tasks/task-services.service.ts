@@ -12,6 +12,9 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TaskServicesService {
+  NotificationMsg(arg0: string, arg1: string) {
+    throw new Error('Method not implemented.');
+  }
   private apiUrl = 'http://localhost:5000/tasks';
   constructor(
     private http: HttpClient

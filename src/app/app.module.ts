@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { provideToastr } from 'ngx-toastr';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,7 +41,10 @@ const appRoutes:Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes, { enableTracing:true }),
   ],
-  providers: [],
+  providers: [
+    provideAnimations(), 
+    provideToastr(),
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
