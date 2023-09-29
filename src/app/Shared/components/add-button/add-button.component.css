@@ -1,3 +1,13 @@
 .pressed {
     transform: matrix(0.95, 0, 0, 0.95, 0, 0);
-}
+}button.btn.custom-btn {
+    height: 35px;
+    width: 160px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 5px #cdcdcd;
+    color: #fff;
+  }

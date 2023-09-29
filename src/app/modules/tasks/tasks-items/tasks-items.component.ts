@@ -6,7 +6,7 @@ import { Task } from 'src/app/Task';
 @Component({
   selector: 'app-tasks-items',
   templateUrl: './tasks-items.component.html',
-  styleUrls: ['./tasks-items.component.css'],
+  styleUrls: ['../task-style/styles.css','./tasks-items.component.css'],
 })
 export class TasksItemsComponent implements OnInit {
   @Input() task: Task | undefined;
