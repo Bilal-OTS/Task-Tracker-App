@@ -5,8 +5,9 @@
         </div>
     </div>
 </section>
-<section class="main-section pt-5">
+<section class="main-section pt-5" *ngIf="tasks.length">
     <div class="container">
+        
         <div class="row" *ngFor="let task of tasks"
       
         >
@@ -24,4 +25,10 @@
         </div>
     </div>
 </section>
-
+<section *ngIf="!tasks.length">
+    <div class="container">
+        <div class="row text-center text-black">
+            <p>No Tasks</p>
+        </div>
+    </div>
+</section>
