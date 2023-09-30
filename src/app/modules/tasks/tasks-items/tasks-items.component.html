@@ -5,8 +5,9 @@
         </div>
     </div>
 </section>
-<section class="main-section pt-5">
+<section class="main-section pt-2" *ngIf="tasks.length">
     <div class="container">
+        
         <div class="row" *ngFor="let task of tasks"
       
         >
@@ -24,4 +25,11 @@
         </div>
     </div>
 </section>
-
+<section *ngIf="!tasks.length">
+    <div class="container">
+        <div class="row d-block text-center text-black">
+            <img src="../../../../assets/images/nodatahasfound.jpg" alt="No Tasks" class="no-tasks">
+            <p>No Tasks has found!</p>
+        </div>
+    </div>
+</section>
